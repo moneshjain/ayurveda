@@ -1,0 +1,975 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday 🎉</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Base Styles with Enhanced Luxury Romance */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #fff5f5, #feeae6, #ffe9e6, #ffd6e0);
+      background-size: 400% 400%;
+      animation: gradientBackground 15s ease infinite;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      color: #5d4157;
+    }
+    
+    @keyframes gradientBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Enhanced Background pattern with floating hearts */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle, rgba(255, 192, 203, 0.15) 1px, transparent 1px);
+        /* url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='%23ffe9e6' %3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E"); */
+      background-size: 40px 40px, 30px 30px;
+      opacity: 0.4;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    /* Enhanced Vignette effect */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, transparent 60%, rgba(216, 90, 127, 0.25) 100%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    
+    /* Enhanced Header Styles with Luxury Elements */
+    header {
+      margin-bottom: 4rem;
+      position: relative;
+      padding: 2rem 0;
+      animation: fadeIn 1.5s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    h1 {
+      font-family: 'Playfair Display', 'Times New Roman', serif;
+      font-size: 4rem;
+      background: linear-gradient(45deg, #d85a7f, #6b4984);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+      position: relative;
+      display: inline-block;
+      letter-spacing: 1px;
+    }
+    
+    h1::before, h1::after {
+      content: "❦";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.5rem;
+      color: rgba(216, 90, 127, 0.5);
+      animation: floatOrb 3s ease-in-out infinite alternate;
+    }
+    
+    @keyframes floatOrb {
+      from { transform: translateY(-50%) scale(1); }
+      to { transform: translateY(-50%) scale(1.2); opacity: 0.8; }
+    }
+    
+    h1::before {
+      left: -3.5rem;
+      animation-delay: 0.5s;
+    }
+    
+    h1::after {
+      right: -3.5rem;
+      animation-delay: 0s;
+    }
+    
+    .subtitle {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.8rem;
+      color: #b5838d;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+      animation: shimmer 3s infinite;
+      background: linear-gradient(90deg, 
+        rgba(181, 131, 141, 1) 0%, 
+        rgba(216, 90, 127, 1) 50%, 
+        rgba(181, 131, 141, 1) 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+    
+    .header-underline {
+      display: inline-block;
+      position: relative;
+      width: 200px;
+      height: 2px;
+      background: linear-gradient(to right, transparent, rgba(216, 90, 127, 0.6), transparent);
+    }
+    
+    .header-underline::after {
+      content: "♥";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.2rem;
+      color: #d85a7f;
+      animation: heartbeat 1.5s infinite;
+    }
+    
+    @keyframes heartbeat {
+      0% { transform: translateX(-50%) scale(1); }
+      5% { transform: translateX(-50%) scale(1.3); }
+      10% { transform: translateX(-50%) scale(1); }
+      15% { transform: translateX(-50%) scale(1.2); }
+      20% { transform: translateX(-50%) scale(1); }
+      100% { transform: translateX(-50%) scale(1); }
+    }
+    
+    /* Enhanced Timeline Container with Elegant Features */
+    .timeline-container {
+      position: relative;
+      width: 100%;
+      padding: 3rem 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      margin-top: 2rem;
+    }
+    
+    .timeline-container::-webkit-scrollbar {
+      height: 8px;
+    }
+    
+    .timeline-container::-webkit-scrollbar-track {
+      background: rgba(216, 90, 127, 0.1);
+      border-radius: 10px;
+    }
+    
+    .timeline-container::-webkit-scrollbar-thumb {
+      background: rgba(216, 90, 127, 0.3);
+      border-radius: 10px;
+    }
+    
+    /* Enhanced Timeline Path with Luxury Gold */
+    .timeline {
+      position: relative;
+      min-width: 1100px;
+      height: 400px;
+      margin: 0 auto;
+    }
+    
+    .timeline-path {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to right, 
+        rgba(212, 175, 55, 0.8), 
+        rgba(230, 190, 138, 0.8), 
+        rgba(216, 90, 127, 0.8),
+        rgba(230, 190, 138, 0.8),
+        rgba(212, 175, 55, 0.8));
+      transform: translateY(-50%);
+      z-index: 1;
+      box-shadow: 0 0 20px rgba(216, 90, 127, 0.4);
+      animation: glowPath 3s infinite alternate;
+    }
+    
+    @keyframes glowPath {
+      from { box-shadow: 0 0 10px rgba(216, 90, 127, 0.4); }
+      to { box-shadow: 0 0 25px rgba(216, 90, 127, 0.6); }
+    }
+    
+    .timeline-path::before, .timeline-path::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(216, 90, 127, 0.8), rgba(212, 175, 55, 0.8));
+      transform: translateY(-50%);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    }
+    
+    .timeline-path::before {
+      left: -5px;
+      animation: pulseStart 2s infinite;
+    }
+    
+    .timeline-path::after {
+      right: -5px;
+      animation: pulseEnd 2s infinite;
+    }
+    
+    @keyframes pulseStart {
+      0% { transform: translateY(-50%) scale(1); box-shadow: 0 0 10px rgba(212, 175, 55, 0.6); }
+      50% { transform: translateY(-50%) scale(1.3); box-shadow: 0 0 20px rgba(212, 175, 55, 0.8); }
+      100% { transform: translateY(-50%) scale(1); box-shadow: 0 0 10px rgba(212, 175, 55, 0.6); }
+    }
+    
+    @keyframes pulseEnd {
+      0% { transform: translateY(-50%) scale(1); box-shadow: 0 0 10px rgba(216, 90, 127, 0.6); }
+      50% { transform: translateY(-50%) scale(1.3); box-shadow: 0 0 20px rgba(216, 90, 127, 0.8); }
+      100% { transform: translateY(-50%) scale(1); box-shadow: 0 0 10px rgba(216, 90, 127, 0.6); }
+    }
+    
+    /* Enhanced Milestone Styles with Luxury Details */
+    .milestone {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      cursor: pointer;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .milestone:hover {
+      transform: translateY(-50%) scale(1.1);
+      filter: brightness(1.1);
+      z-index: 10;
+    }
+    
+    .milestone:nth-child(odd) {
+      margin-top: -80px;
+    }
+    
+    .milestone:nth-child(even) {
+      margin-top: 50px;
+    }
+    
+    .polaroid {
+      background-color: white;
+      padding: 12px 12px 35px 12px;
+      box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(216, 90, 127, 0.1);
+      display: inline-block;
+      transform: rotate(-3deg);
+      transition: all 0.5s ease;
+      width: 190px;
+      position: relative;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    
+    .polaroid::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      pointer-events: none;
+      box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.05);
+    }
+    
+    .polaroid:hover {
+      box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(216, 90, 127, 0.2);
+      transform: rotate(-1deg) translateY(-10px);
+    }
+    
+    .milestone:nth-child(even) .polaroid {
+      transform: rotate(3deg);
+    }
+    
+    .milestone:nth-child(even) .polaroid:hover {
+      transform: rotate(1deg) translateY(-10px);
+    }
+    
+    .polaroid img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      display: block;
+      border-radius: 2px;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.5s ease;
+      filter: saturate(1.1) brightness(1.05);
+    }
+    
+    .polaroid:hover img {
+      filter: saturate(1.3) brightness(1.1);
+    }
+    
+    .polaroid::after {
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      background: linear-gradient(135deg, #d85a7f, #e6be8a);
+      border-radius: 50%;
+      bottom: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 0 5px rgba(216, 90, 127, 0.2);
+      animation: pulse 2s infinite;
+      z-index: 1;
+    }
+    
+    /* Enhanced Milestone labels */
+    .polaroid .milestone-label {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.1rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #d85a7f, #6b4984);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 0 5px;
+    }
+    
+    /* Enhanced pulse animation */
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(216, 90, 127, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(216, 90, 127, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(216, 90, 127, 0);
+      }
+    }
+    
+    /* Enhanced Floating hearts with variety */
+    .heart {
+      position: absolute;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d85a7f' opacity='0.5' %3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      z-index: 0;
+      pointer-events: none;
+      animation: float 15s linear infinite;
+      filter: drop-shadow(0 0 5px rgba(216, 90, 127, 0.3));
+    }
+    
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg) translateX(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.5;
+      }
+      90% {
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(-600px) rotate(360deg) translateX(100px);
+        opacity: 0;
+      }
+    }
+    
+    /* Enhanced Modal Styles with Luxury Elements */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(8px);
+    }
+    
+    .modal.active {
+      display: flex;
+      opacity: 1;
+    }
+    
+    .modal-content {
+      background: linear-gradient(135deg, #fff, #feeae6);
+      padding: 35px;
+      max-width: 650px;
+      width: 85%;
+      border-radius: 15px;
+      box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(216, 90, 127, 0.1),
+        inset 0 0 30px rgba(216, 90, 127, 0.03);
+      text-align: center;
+      position: relative;
+      transform: scale(0.8);
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid rgba(216, 90, 127, 0.2);
+      overflow: hidden;
+    }
+    
+    .modal-content::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at top right, rgba(216, 90, 127, 0.1), transparent 70%),
+        radial-gradient(circle at bottom left, rgba(230, 190, 138, 0.1), transparent 70%);
+      pointer-events: none;
+    }
+    
+    .modal.active .modal-content {
+      transform: scale(1);
+    }
+    
+    .modal-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      border: 3px solid white;
+      transition: all 0.5s ease;
+      filter: saturate(1.1);
+    }
+    
+    .modal-title {
+      font-family: 'Playfair Display', 'Times New Roman', serif;
+      font-size: 2.5rem;
+      background: linear-gradient(45deg, #d85a7f, #6b4984);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1.2rem;
+      position: relative;
+      display: inline-block;
+      letter-spacing: 1px;
+    }
+    
+    .modal-title::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, transparent, rgba(216, 90, 127, 0.6), transparent);
+    }
+    
+    .modal-caption {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.8rem;
+      color: #b5838d;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+    }
+    
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: white;
+      border: 1px solid #d85a7f;
+      color: #d85a7f;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+    
+    .close-btn:hover {
+      background-color: #d85a7f;
+      color: white;
+      transform: rotate(90deg);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Enhanced Continue Button with Luxury Elements */
+    .continue-btn {
+      display: inline-block;
+      margin-top: 3rem;
+      padding: 1.2rem 3rem;
+      background: linear-gradient(45deg, #d85a7f, #e6be8a);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 
+        0 8px 20px rgba(216, 90, 127, 0.4),
+        0 0 0 3px rgba(216, 90, 127, 0.1);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      position: relative;
+      overflow: hidden;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    
+    .continue-btn:hover {
+      transform: translateY(-7px) scale(1.05);
+      box-shadow: 
+        0 15px 30px rgba(216, 90, 127, 0.5),
+        0 0 0 3px rgba(216, 90, 127, 0.2);
+    }
+    
+    .continue-btn::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+      opacity: 0;
+      transform: scale(0.5);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+    
+    .continue-btn:hover::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    /* Enhanced Responsive Styles for better mobile experience */
+    @media (max-width: 992px) {
+      h1 {
+        font-size: 3.5rem;
+      }
+      
+      .modal-content {
+        width: 90%;
+        padding: 30px;
+      }
+    }
+    
+    /* Mobile optimization for single screen view */
+    @media (max-width: 768px) and (max-height: 900px) {
+      .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      .timeline {
+        height: 240px;
+      }
+    }
+    
+    @media (max-width: 576px) and (max-height: 700px) {
+      .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      .timeline {
+        height: 180px;
+      }
+      
+      .milestone:nth-child(odd) {
+        margin-top: -45px;
+      }
+      
+      .milestone:nth-child(even) {
+        margin-top: 25px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+      
+      h1::before, h1::after {
+        font-size: 2rem;
+      }
+      
+      h1::before {
+        left: -2.5rem;
+      }
+      
+      h1::after {
+        right: -2.5rem;
+      }
+      
+      .subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      .container {
+        padding: 1rem 1.5rem;
+      }
+      
+      header {
+        margin-bottom: 2rem;
+        padding: 1rem 0;
+      }
+      
+      .timeline-container {
+        padding: 1.5rem 0;
+      }
+      
+      .timeline {
+        height: 280px;
+      }
+      
+      .polaroid {
+        width: 160px;
+      }
+      
+      .polaroid img {
+        height: 120px;
+      }
+      
+      .modal-title {
+        font-size: 2rem;
+      }
+      
+      .modal-caption {
+        font-size: 1.5rem;
+      }
+      
+      .continue-btn {
+        padding: 1rem 2.5rem;
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.3rem;
+      }
+      
+      h1::before, h1::after {
+        font-size: 1.3rem;
+      }
+      
+      h1::before {
+        left: -1.8rem;
+      }
+      
+      h1::after {
+        right: -1.8rem;
+      }
+      
+      .subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.3;
+      }
+      
+      .container {
+        padding: 0.8rem 1rem;
+      }
+      
+      header {
+        margin-bottom: 1.5rem;
+        padding: 0.5rem 0;
+      }
+      
+      .timeline-container {
+        padding: 1rem 0;
+      }
+      
+      .timeline {
+        height: 220px;
+      }
+      
+      .milestone:nth-child(odd) {
+        margin-top: -60px;
+      }
+      
+      .milestone:nth-child(even) {
+        margin-top: 35px;
+      }
+      
+      .polaroid {
+        width: 120px;
+      }
+      
+      .polaroid img {
+        height: 90px;
+      }
+      
+      .polaroid .milestone-label {
+        font-size: 0.9rem;
+      }
+      
+      .modal-content {
+        width: 95%;
+        padding: 25px 20px;
+      }
+      
+      .modal-title {
+        font-size: 1.8rem;
+      }
+      
+      .modal-caption {
+        font-size: 1.3rem;
+      }
+      
+      .continue-btn {
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+      }
+      
+      .header-underline {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Moments Worth Remembering</h1>
+      <p class="subtitle">Some memories don’t need explanations,<br>they simply bring a smile every time we look back.</p>
+      <span class="header-underline"></span>
+    </header>
+    
+    <div class="timeline-container">
+      <div class="timeline">
+        <div class="timeline-path"></div>
+        
+        <!-- Milestones will be added here by JavaScript -->
+      </div>
+    </div>
+    
+    <button class="continue-btn">Make a Birthday Wish 🎂✨</button>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal" id="milestoneModal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <img src="" alt="" class="modal-image">
+      <h3 class="modal-title"></h3>
+      <p class="modal-caption"></p>
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Define milestones data with year recap highlights
+      const milestones = [
+        {
+          id: 1,
+          title: "Timeless Spark",
+          image: "d1.jpeg",
+          caption: "A timeless portrait of pure, mischievous joy and sparkling curiosity.❤️",
+          position: 10 // percentage position along the timeline
+        },
+        {
+          id: 2,
+          title: "Grace & Tradition",
+          image: "d2.jpeg",
+          caption: "Traditional attire that reflects cultural roots and elegance.💃💕",
+          position: 25
+        },
+        {
+          id: 3,
+          title: "Looking Ahead",
+          image: "d3.jpeg",
+          caption: "May your journey ahead be filled with happiness, success, and endless smiles.😊✨",
+          position: 40
+        },
+        {
+          id: 4,
+          title: "A Thoughtful Nature",
+          image: "d4.jpeg",
+          caption: "Keep being genuine and strong — it suits you well.✨",
+          position: 55
+        },
+        {
+          id: 5,
+          title: "Pretty Soul",
+          image: "d5.jpeg",
+          caption: "You’re truly one of the sweetest girls I know, and I feel lucky to have a friend like you.🌼💫",
+          position: 70
+        },
+        {
+          id: 6,
+          title: "Just Be You",
+          image: "d6.jpeg",
+          caption: "Keep being the amazing person you are—you make every moment brighter.🌸🌟",
+          position: 85
+        }
+      ];
+      
+      const timeline = document.querySelector('.timeline');
+      const modal = document.getElementById('milestoneModal');
+      const modalImage = modal.querySelector('.modal-image');
+      const modalTitle = modal.querySelector('.modal-title');
+      const modalCaption = modal.querySelector('.modal-caption');
+      const closeBtn = modal.querySelector('.close-btn');
+      
+      // Create milestone elements with labels
+      milestones.forEach((milestone, index) => {
+        const milestoneEl = document.createElement('div');
+        milestoneEl.className = 'milestone';
+        milestoneEl.style.left = `${milestone.position}%`;
+        milestoneEl.style.opacity = '0';
+        milestoneEl.style.transform = 'translateY(-50%) translateX(-20px)';
+        
+        milestoneEl.innerHTML = `
+          <div class="polaroid">
+            <img src="${milestone.image}" alt="${milestone.title}">
+            <div class="milestone-label">${milestone.title}</div>
+          </div>
+        `;
+        
+        milestoneEl.setAttribute('data-id', milestone.id);
+        timeline.appendChild(milestoneEl);
+        
+        // Animate milestone appearance with delay based on index
+        setTimeout(() => {
+          milestoneEl.style.opacity = '1';
+          milestoneEl.style.transform = 'translateY(-50%) translateX(0)';
+          milestoneEl.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        }, 300 * index);
+        
+        // Add click event to show modal
+        milestoneEl.addEventListener('click', function() {
+          const id = this.getAttribute('data-id');
+          const milestoneData = milestones.find(m => m.id === parseInt(id));
+          
+          modalImage.src = milestoneData.image;
+          modalImage.alt = milestoneData.title;
+          modalTitle.textContent = milestoneData.title;
+          modalCaption.textContent = milestoneData.caption;
+          
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      
+      // Close modal when X is clicked
+      closeBtn.addEventListener('click', function() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+      
+      // Close modal when clicking outside the content
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+      
+      // Create floating hearts background
+      function createHearts() {
+        for (let i = 0; i < 30; i++) {
+          const heart = document.createElement('div');
+          heart.className = 'heart';
+          
+          // Random positions
+          const startPositionX = Math.random() * 100;
+          const startPositionY = 100 + Math.random() * 100;
+          
+          // Random sizes
+          const size = 10 + Math.random() * 20;
+          
+          // Random animation duration
+          const duration = 10 + Math.random() * 20;
+          const delay = Math.random() * 5;
+          
+          heart.style.left = `${startPositionX}%`;
+          heart.style.bottom = `${startPositionY}px`;
+          heart.style.width = `${size}px`;
+          heart.style.height = `${size}px`;
+          heart.style.animationDuration = `${duration}s`;
+          heart.style.animationDelay = `${delay}s`;
+          heart.style.opacity = (0.3 + Math.random() * 0.5).toString();
+          
+          document.body.appendChild(heart);
+        }
+      }
+      
+      createHearts();
+      
+      // Continue button functionality - this is a placeholder
+      // In a real application, this would navigate to another page or reveal more content
+      const continueBtn = document.querySelector('.continue-btn');
+      continueBtn.addEventListener('click', function() {
+        // You could add more functionality here, like redirecting to another page
+         window.location.href = 'letter.html';
+      });
+    });
+  </script>
+</body>
+</html>

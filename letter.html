@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Kitty Love Letter - Page 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    /* Same luxury gradient */
+    background: linear-gradient(135deg, #fff5f5, #feeae6, #ffe9e6, #ffd6e0);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    /* min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #fee9f7, #e8f5fe, #fef2e8, #f0ffe8);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    overflow: hidden;
+    position: relative; */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        radial-gradient(circle, rgba(255, 192, 203, 0.15) 1px, transparent 1px);
+        /* url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='%23ffe9e6'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E"); */
+    background-size: 40px 40px, 30px 30px;
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 60%, rgba(216, 90, 127, 0.25) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+            /* body { */
+        /* font-family: 'Segoe UI', Arial, sans-serif; */
+        /* background-image: url('back33.jpg'); 👈 Add your image here */
+        /* background-size: cover;       makes image fill the screen */
+        /* background-position: center;  centers the image */
+        /* background-repeat: no-repeat; prevents tiling */
+        /* background-attachment: fixed; optional: keeps image fixed during scroll */
+        /* min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+} */
+/* body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%; */
+    /* background: rgba(255, 192, 203, 0.25); light pink tint */
+    /* z-index: -1; */
+/* } */
+
+
+        .letter-container {
+            width: 100%;
+            max-width: 700px;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAwIiBoZWlnaHQ9IjkwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2ZmZTRlODtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZmZkNGU1O3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjcwMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjYmcpIi8+Cjwvc3ZnPg==');
+            background-size: cover;
+            padding: 60px 50px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .decorative-border {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 3px solid #fdb5d9;
+            border-radius: 10px;
+            pointer-events: none;
+        }
+
+        .decorative-border::before {
+            content: '🎀';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            background: #ffe4e8;
+            padding: 0 10px;
+        }
+
+        .letter-content {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 10px;
+            line-height: 1.8;
+            font-size: 18px;
+            color: #222;
+            background: linear-gradient(135deg, 
+                rgba(255, 182, 217, 0.3) 0%, 
+                rgba(218, 165, 255, 0.3) 50%,
+                rgba(255, 182, 217, 0.3) 100%);
+        }
+
+        .letter-text {
+            background: linear-gradient(135deg, #ff69b4, #da70d6, #ff1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .letter-text p {
+            margin-bottom: 15px;
+        }
+
+        .signature {
+            text-align: right;
+            font-style: italic;
+            margin-top: 30px;
+            background: linear-gradient(135deg, #ff1493, #da70d6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .floating-hearts {
+            position: absolute;
+            font-size: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .heart1 { top: 10%; left: 5%; animation-delay: 0s; }
+        .heart2 { top: 20%; right: 8%; animation-delay: 1s; }
+        .heart3 { bottom: 15%; left: 10%; animation-delay: 2s; }
+        .heart4 { bottom: 25%; right: 5%; animation-delay: 1.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .hello-kitty-corner {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            font-size: 50px;
+            animation: pulse 2s ease-in-out infinite;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @media (max-width: 600px) {
+            .letter-container {
+                padding: 40px 30px;
+            }
+            .letter-content {
+                padding: 30px 20px;
+                font-size: 14px;
+            }
+            .hello-kitty-corner {
+                font-size: 35px;
+            }
+            .letter-pic {
+                left: 10px;
+                bottom: 30px;
+                width: 90px;
+                height: auto;
+            }
+        }
+
+        .next-page-btn {
+            margin: 10px auto 20px;
+            padding: 14px 36px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+
+            background: linear-gradient(45deg, #f599c7, #ff9ad5);
+            color: white;
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .next-page-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 28px rgba(255, 105, 180, 0.55);
+        }
+
+    </style>
+</head>
+<script>
+    function goNextPage() {
+        window.location.href = "music.html"; // 👈 yaha apna next page file name
+    }
+</script>
+<body>
+    <div class="letter-container">
+        <div class="decorative-border"></div>
+        
+        <div class="floating-hearts heart1">🌸</div>
+        <div class="floating-hearts heart2">🌼</div>
+        <div class="floating-hearts heart3">🌸</div>
+        <div class="floating-hearts heart4">💝</div>
+                                                                                                                                                                            
+        <div class="letter-content">
+            <div class="letter-text">
+                <p><strong>A Note Just for You,</strong></p>
+                
+                <p>Every laugh, every chat, and every moment we’ve shared has been truly special.
+            Every conversation and shared moment of support has been meaningful.
+            I truly appreciate the positivity and encouragement you bring into my life.
+            On your birthday, I wish you happiness, success, and peace in everything you do.</p>
+                
+                <p>Keep smiling, keep growing, and keep being the amazing person you are.
+            You deserve all the joy in the world—keep shining and spreading your beautiful energy.🦋</p>
+               
+                
+                <p class="signature">Wishing You the Best💫🌸</p>
+            </div>
+        </div>
+
+    <img src="gif2 copy.gif" alt="Decorative" class="letter-pic" style="position:absolute; left:50px; bottom:60px; width:100px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.12);" />
+            <div class="hello-kitty-corner">🎀🌸</div>
+    </div>
+
+    <div style="text-align:center; margin-top:30px;">
+        <button class="next-page-btn" onclick="goNextPage()">
+            Next Surprise
+        </button>
+    </div>
+
+    
+
+</body>
+</html>
