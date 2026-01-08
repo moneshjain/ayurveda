@@ -478,8 +478,26 @@
     .modal.active .modal-content {
       transform: scale(1);
     }
-    
+
     .modal-image {
+      width: auto;                /* ❌ full width हटाया */
+      max-width: 70%;             /* ✅ image को छोटा रखा */
+      max-height: 260px;          /* ✅ height control */
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 0 auto 1.5rem;      /* ✅ center alignment */
+      display: block;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+      border: 3px solid white;
+      transition: all 0.4s ease;
+    }
+
+    .modal-image:hover {
+      transform: scale(1.03);
+    }
+
+    
+    /* .modal-image {
       width: 100%;
       max-height: 400px;
       object-fit: cover;
@@ -489,7 +507,7 @@
       border: 3px solid white;
       transition: all 0.5s ease;
       filter: saturate(1.1);
-    }
+    } */
     
     .modal-title {
       font-family: 'Playfair Display', 'Times New Roman', serif;
@@ -602,6 +620,11 @@
     @media (max-width: 992px) {
       h1 {
         font-size: 3.5rem;
+      }
+
+      .modal-image {
+        max-width: 85%;
+        max-height: 220px;
       }
       
       .modal-content {
