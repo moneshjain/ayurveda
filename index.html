@@ -71,6 +71,7 @@
             text-align: center;
             animation: glow 2s ease-in-out infinite alternate;
             z-index: 10;
+            margin-bottom: 80px; /* 👈 heading aur cake ke beech gap */
         }
 
         @keyframes glow {
@@ -438,16 +439,11 @@
         }
 
         @media (max-width: 600px) {
-         .heading {
-        font-size: 2.2rem;
-        white-space: normal;
+    .heading {
+        font-size: 2.2rem;     /* mobile ke liye perfect */
+        white-space: normal;   /* allow wrap if needed */
         padding: 0 10px;
         line-height: 1.2;
-        margin-bottom: 300px; /* 👈 heading aur cake ke beech gap */
-    }
-
-    .cake-container {
-        margin-top: 200px; /* 👈 thoda aur breathing space */
     }
 }
 
@@ -467,7 +463,7 @@
             <a href="last.html">Special</a>
         </div> 
     </nav> -->
-    <h1 class="heading">Let' Celebrate! 🎂</h1>
+    <h1 class="heading">Let's Celebrate! 🎂</h1>
     <div class="cake-container">
        
         <div class="cake">
