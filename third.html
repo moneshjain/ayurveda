@@ -265,6 +265,7 @@
     /* Enhanced Milestone Styles with Luxury Details */
     .milestone {
       position: absolute;
+      /* left: 20%; */
       top: 50%;
       transform: translateY(-50%);
       z-index: 2;
@@ -635,12 +636,16 @@
     
     /* Mobile optimization for single screen view */
     @media (max-width: 768px) and (max-height: 900px) {
-      .container {
+      /* .container {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-      }
+      } */
+       .container {
+          min-height: auto;
+          display: block;   /* ✅ normal flow */
+        }
       
       .timeline {
         height: 240px;
@@ -814,49 +819,24 @@
         width: 150px;
       }
     }
-    /* FIX: Header aur images ke beech ka extra gap (Mobile) */
-    @media (max-width: 768px) {
-      header {
-        margin-bottom: 0.8rem !important;
-      }
 
-      .timeline-container {
-        padding-top: 0.5rem !important;
-        padding-bottom: 0.8rem !important;
-      }
-    }
+    /* =======================
+   MOBILE SPACING FIX
+   SAME ZIG-ZAG PATTERN
+   ======================= */
+@media (max-width: 768px) {
 
-    /* FIX: Mobile me images door-door na ho */
-    @media (max-width: 576px) {
-      .milestone:nth-child(odd),
-      .milestone:nth-child(even) {
-        margin-top: 0 !important;
-      }
+  .timeline {
+    min-width: 700px;   /* 🔥 mobile me compact */
+    height: 260px;
+  }
 
-      .timeline {
-        height: 170px !important;
-      }
-    }
-    /* FIX: Images aur button ke beech gap kam */
-    @media (max-width: 768px) {
-      .continue-btn {
-        margin-top: 0.8rem !important;
-      }
-    }
-    /* OPTIONAL: Mobile compact look */
-    @media (max-width: 576px) {
-      .timeline-path {
-        height: 3px;
-      }
+  .timeline-container {
+    overflow-x: auto;
+  }
+}
 
-      .polaroid {
-        width: 110px;
-      }
-
-      .polaroid img {
-        height: 85px;
-      }
-    }
+    
 
   </style>
 </head>
