@@ -973,19 +973,31 @@
           milestoneEl.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
         }, 300 * index);
         
-        // Add click event to show modal
-        milestoneEl.addEventListener('click', function() {
+        milestoneEl.addEventListener('click', function (e) {
+
+          // upload button ya file pe click ho to modal na khule
+          if (
+            e.target.classList.contains('upload-btn') ||
+            e.target.classList.contains('image-upload')
+          ) {
+            return;
+          }
+
           const id = this.getAttribute('data-id');
           const milestoneData = milestones.find(m => m.id === parseInt(id));
-          
-          modalImage.src = milestoneData.image;
+
+          // ✅ CURRENT image lo (uploaded ya default)
+          const currentImg = this.querySelector('.milestone-img').src;
+
+          modalImage.src = currentImg;
           modalImage.alt = milestoneData.title;
           modalTitle.textContent = milestoneData.title;
           modalCaption.textContent = milestoneData.caption;
-          
+
           modal.classList.add('active');
           document.body.style.overflow = 'hidden';
         });
+
       });
       
       // Close modal when X is clicked
@@ -1060,12 +1072,12 @@
       const milestoneId = e.target.getAttribute('data-id');
       localStorage.setItem(`milestone-image-${milestoneId}`, imageURL);
     });
+  // 🔁 reload ke baad uploaded image restore
+  const savedImage = localStorage.getItem(`milestone-image-${milestone.id}`);
+  if (savedImage) {
+    milestoneEl.querySelector('.milestone-img').src = savedImage;
+  }
 
-    // 🔁 reload ke baad bhi image rahe
-    const savedImage = localStorage.getItem(`milestone-image-${milestone.id}`);
-    if (savedImage) {
-      milestoneEl.querySelector('.milestone-img').src = savedImage;
-    }
 
 
   </script>
