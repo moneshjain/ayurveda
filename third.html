@@ -876,14 +876,14 @@
         {
           id: 1,
           title: "Timeless Spark",
-          image: "d1.jpeg",
+          image: "d1.jpg",
           caption: "A timeless portrait of pure, mischievous joy and sparkling curiosity.❤️",
           position: 10 // percentage position along the timeline
         },
         {
           id: 2,
           title: "Grace & Tradition",
-          image: "d2.jpeg",
+          image: "d2.jpg",
           caption: "Traditional attire that reflects cultural roots and elegance.💃💕",
           position: 25
         },
@@ -897,21 +897,21 @@
         {
           id: 4,
           title: "A Thoughtful Nature",
-          image: "d4.jpeg",
+          image: "d4.jpg",
           caption: "Keep being genuine and strong — it suits you well.✨",
           position: 55
         },
         {
           id: 5,
           title: "Pretty Soul",
-          image: "d5.jpeg",
+          image: "d5.jpg",
           caption: "You’re truly one of the sweetest girls I know, and I feel lucky to have a friend like you.🌼💫",
           position: 70
         },
         {
           id: 6,
           title: "Just Be You",
-          image: "d6.jpeg",
+          image: "d6.jpg",
           caption: "Keep being the amazing person you are—you make every moment brighter.🌸🌟",
           position: 85
         }
@@ -932,12 +932,36 @@
         milestoneEl.style.opacity = '0';
         milestoneEl.style.transform = 'translateY(-50%) translateX(-20px)';
         
+        // milestoneEl.innerHTML = `
+        //   <div class="polaroid">
+        //     <img src="${milestone.image}" alt="${milestone.title}">
+        //     <div class="milestone-label">${milestone.title}</div>
+        //   </div>
+        // `;
+
         milestoneEl.innerHTML = `
-          <div class="polaroid">
-            <img src="${milestone.image}" alt="${milestone.title}">
-            <div class="milestone-label">${milestone.title}</div>
-          </div>
-        `;
+        <div class="polaroid">
+          <img src="${milestone.image}" 
+              alt="${milestone.title}" 
+              class="milestone-img">
+
+          <input 
+            type="file" 
+            accept="image/*"
+            class="image-upload"
+            data-id="${milestone.id}"
+            id="upload-${milestone.id}"
+            hidden
+          >
+
+<label for="upload-${milestone.id}" class="upload-btn">
+  📸 Add Photo
+</label>
+
+          <div class="milestone-label">${milestone.title}</div>
+        </div>
+      `;
+
         
         milestoneEl.setAttribute('data-id', milestone.id);
         timeline.appendChild(milestoneEl);
@@ -1017,6 +1041,33 @@
          window.location.href = 'letter.html';
       });
     });
+    // 📸 Image upload preview (GitHub Pages compatible)
+    document.addEventListener('change', function (e) {
+
+      if (!e.target.classList.contains('image-upload')) return;
+
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const milestoneDiv = e.target.closest('.milestone');
+      const img = milestoneDiv.querySelector('.milestone-img');
+
+      // show selected image
+      const imageURL = URL.createObjectURL(file);
+      img.src = imageURL;
+
+      // save temporarily (same browser)
+      const milestoneId = e.target.getAttribute('data-id');
+      localStorage.setItem(`milestone-image-${milestoneId}`, imageURL);
+    });
+
+    // 🔁 reload ke baad bhi image rahe
+    const savedImage = localStorage.getItem(`milestone-image-${milestone.id}`);
+    if (savedImage) {
+      milestoneEl.querySelector('.milestone-img').src = savedImage;
+    }
+
+
   </script>
 </body>
 </html>
