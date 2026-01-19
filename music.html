@@ -112,6 +112,13 @@
             height: 20px;
             width: 50px;
         }
+        .memory {
+            background: rgba(255, 182, 193, 0.18);
+            padding: 8px 12px;
+            border-radius: 14px;
+            box-shadow: 0 0 12px rgba(255, 105, 180, 0.35);
+        }
+
 
         .bar {
             width: 4px;
@@ -757,10 +764,15 @@
                 const playBtn = card.querySelector('.play-btn');
                 const equalizer = card.querySelector('.equalizer');
                 const audio = card.querySelector('audio');
+                const memory = card.querySelector('.memory');
                 const title = card.querySelector('h3').textContent;
                 const artist = card.querySelector('.text-purple-500').textContent;
 
                 playBtn.addEventListener('click', () => {
+
+                    document.querySelectorAll('.memory').forEach(m => {
+                        m.classList.add('hidden', 'opacity-0');
+                    });
                     if (activeAudio && currentIndex !== index) {
                         stopCurrent();
                     }
@@ -769,10 +781,24 @@
                         audio.pause();
                         playBtn.innerHTML = '<i class="fas fa-play text-lg"></i>';
                         equalizer.classList.add('hidden');
+
+                        // ❌ YE LINE REMOVE KARO
+                        memory.classList.add('opacity-0');
+                        setTimeout(() => memory.classList.add('hidden'), 300);
+
                         return;
+                        // memory.classList.add('opacity-0');
+                        // setTimeout(() => memory.classList.add('hidden'), 300);
+                        // audio.pause();
+                        // playBtn.innerHTML = '<i class="fas fa-play text-lg"></i>';
+                        // equalizer.classList.add('hidden');
+                        // return;
                     }
 
                     audio.play();
+                    memory.classList.remove('hidden');
+                    setTimeout(() => memory.classList.remove('opacity-0'), 50);
+
                     attachSeek(audio);
 
                     playlist.forEach(c => {
@@ -789,6 +815,8 @@
                     nowPlayingBar.classList.add('translate-y-0');
 
                     currentIndex = index;
+                    
+
                 });
             });
         }
